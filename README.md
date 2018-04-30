@@ -173,12 +173,6 @@ Add the annotation @EnableZuulProxy to the MainApplication
 public class MainApplication
 ```
 
-
-Run
-```
-./mvnw spring-boot:run
-```
-
 Rename application.properties to application.yml and add the following into it.
 
 ```
@@ -191,5 +185,9 @@ zuul:
       sensitive-headers:
 ```
   
+## Run
+```
+./mvnw spring-boot:run
+```
 
 
