@@ -10,9 +10,12 @@ In this part 2 of UI as microservices we will create a api gateway using Spring 
 3. ./mvnw spring-boot:run to check that everything whent smoothly.
 
 ## Adding angular 5 application to Spring Boot project. 
-1. Add angular 5 app into main. 
+
+### Add front-end assets plugin to your pom.xml.
+
 -_For more details on this check this article [Spring Angular](http://bit.ly/angular5-spring-boot)_
--a. In your pom add Maven Front-end plugin.
+
+1. In your pom add Maven Front-end plugin.
 
 .pom.xml
 ```
@@ -42,11 +45,12 @@ In this part 2 of UI as microservices we will create a api gateway using Spring 
 </build>
 ```
 
--b. Run the following to install node and npm locally
+2. Run the following to install node and npm locally
  ```
  /mvnw generate-resources
 ```
-- Install angular cli
+
+3. Install angular cli
 - Create file npm in the root folder and copy the following.
 
 ```
@@ -69,7 +73,7 @@ chmod +x npm
 ./npm install @angular/cli
 ```
 
-- Create a program to run ng cli
+4. Create a program to run ng cli
 - Create a file _ng_ and copy the contents of:
 
 ```
@@ -84,11 +88,11 @@ node_modules/@angular/cli/bin/ng "$@"
  chmod +x ng
 ```
 
-- Create a new application as follows:
+5. Create a new application as follows:
 ```
  ./ng new client
 ```
-- Move it into root folder by executing the follwing.
+6. Move it into root folder by executing the follwing.
 ```
 > $ cat client/.gitignore  .gitignore
 $ rm -rf client/node* client/src/favicon.ico client/.gitignore client/.git
@@ -99,7 +103,7 @@ $ rm -rf client
 $ sed -i -e 's,dist,target/classes/static,' .angular-cli.json
 ```
 
-- Building
+7. Building
 - Add the following into the pom.xml, under front-end maven plugin.
 
 ```
@@ -110,7 +114,7 @@ $ sed -i -e 's,dist,target/classes/static,' .angular-cli.json
     </goals
 </execution
 ```
-- Testing
+8. Testing
 - Run the following
 ```
  ./ng e2e
@@ -120,7 +124,7 @@ $ sed -i -e 's,dist,target/classes/static,' .angular-cli.json
 
 - > Executed 1 of 1 spec SUCCESS in 0.718 sec.
 
-- Add the following to the maven front-end plugin
+9. Add the following to the maven front-end plugin
    
 ```
     <execution>
@@ -133,7 +137,7 @@ $ sed -i -e 's,dist,target/classes/static,' .angular-cli.json
         </configuration>
     </execution>
 ```
-- Add bootstrap
+10. Add bootstrap
 ```
 ./npm install bootstrap@3 jquery --save
 ```
