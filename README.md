@@ -6,8 +6,8 @@ In this part 2 of UI as microservices we will create a api gateway using Spring 
 
 ## Creating Spring boot project
 
-1. Create parent folder patient-ui-as-microservices and cd into.
-2. Use https://start.spring.io/ add web and zuul dependencies, generate application and unzip copy the main project into patient-ui-as-microservices.
+1. Create parent folder ui-as-microservices and cd into.
+2. Use https://start.spring.io/ add web and zuul dependencies, generate application and unzip copy the main project into ui-as-microservices.
 3. ./mvnw spring-boot:run to check that everything whent smoothly.
 
 ## Adding angular 5 application to Spring Boot project. 
@@ -186,18 +186,6 @@ server:
   port: 9080
 zuul:
   routes:
-    doctor:
-      url: http://localhost:9081
-      sensitive-headers:
-    booking:
-      url: http://localhost:9083
-      sensitive-headers:
-    payment:
-      url: http://localhost:9084
-      sensitive-headers:
-    patient:
-      url: http://localhost:9082
-      sensitive-headers:
     main:
       url: http://localhost:9080
       sensitive-headers:
