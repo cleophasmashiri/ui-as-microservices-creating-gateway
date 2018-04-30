@@ -159,7 +159,9 @@ $ sed -i -e 's,dist,target/classes/static,' .angular-cli.json
   ],
 ```
 
-Add @EnableZuulProxy to the MainApplication
+## Add Zuul
+
+Add the annotation @EnableZuulProxy to the MainApplication
 
 ```
 @EnableZuulProxy
