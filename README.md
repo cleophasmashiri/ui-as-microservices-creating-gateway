@@ -109,11 +109,11 @@ $ sed -i -e 's,dist,target/classes/static,' .angular-cli.json
 
 ```
  <execution
-    <idnpm-install</id
-    <goals
-        <goalnpm</goal
-    </goals
-</execution
+    <id>npm-install</id>
+    <goals>
+        <goal>npm</goal
+    </goals>
+</execution>
 ```
 8. Testing
 - Run the following
@@ -131,10 +131,10 @@ $ sed -i -e 's,dist,target/classes/static,' .angular-cli.json
     <execution>
         <idnpm-build</id>
         <goals>
-            <goalnpm</goal>
+            <goal>npm</goal>
         </goals>
         <configuration>
-            <argumentsrun-script build</arguments>
+            <arguments>run-script build</arguments>
         </configuration>
     </execution>
 ```
