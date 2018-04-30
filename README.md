@@ -1,4 +1,5 @@
-# ui-as-microservices-creating-gateway
+# UI As Microservices Creating API Gateway Part 2
+
 UI as Microservices Part 2: Creating Gateway with Spring Cloud and Angular 5
 
 In this part 2 of UI as microservices we will create a api gateway using Spring Cloud Configuration service and angular 5. Lets get started.
